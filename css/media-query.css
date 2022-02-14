@@ -1,0 +1,59 @@
+@media all and (max-width: 768px) {
+  .nav-list {
+    justify-content: space-between;
+  }
+
+  .main-title {
+    font-size: 5em;
+  }
+
+  .kata-content {
+    padding: 10px;
+    margin: 70px 0 50px;
+  }
+}
+
+@media all and (max-width: 590px) {
+  .nav-item>button {
+    width: 100px;
+    padding: 5px 12px;
+  }
+
+  .main-title {
+    font-size: 3em;
+  }
+
+  .btn-calc {
+    width: 50px;
+    font-size: inherit;
+  }
+
+  .output-calc {
+    padding: 8px;
+    font-size: inherit;
+    word-break: break-word;
+  }
+}
+
+@media all and (max-width: 420px) {
+  body {
+    padding: 5px 10px 20px;
+  }
+
+  .title {
+    font-size: 1.8em;
+  }
+
+  .nav-item>button {
+    width: 90px;
+    font-size: 13px;
+  }
+
+  .main-title {
+    font-size: 2em;
+  }
+
+  .task-wrap {
+    padding: 5px 10px;
+  }
+}

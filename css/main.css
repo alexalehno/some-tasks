@@ -1,0 +1,160 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  padding: 5px 20px 20px;
+  margin: 0;
+  color: #676767;
+  font-size: 22px;
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(45deg, rgb(0 0 0), rgb(76 76 76), rgb(0 0 0));
+}
+
+.container {
+  max-width: 1360px;
+  margin: 0 auto;
+}
+
+.title {
+  padding-bottom: 10px;
+  margin: 10px 0 20px;
+  border-bottom: 2px solid;
+  text-shadow: 10px -3px 8px rgba(1, 1, 1, 0.2);
+}
+
+.nav {
+  margin-bottom: 40px;
+}
+
+.nav-list {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-item {
+  margin: 5px;
+  list-style: none;
+}
+
+.nav-item>button {
+  padding: 5px 15px;
+  border: 3px solid;
+  border-radius: 8px;
+  font-size: 15px;
+  color: inherit;
+  background-color: rgb(0 0 0 / 0);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.nav-item>button:hover {
+  background-color: rgb(255, 255, 255);
+}
+
+.nav-item>button.highlight {
+  background-color: rgb(0 0 0 / 30%);
+}
+
+.main-title {
+  display: flex;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 7em;
+  text-shadow: 10px -3px 8px rgb(1 1 1 / 20%);
+  user-select: none;
+
+  animation-name: main-title;
+  animation-duration: 0.2s;
+  animation-iteration-count: infinite;
+  animation-direction: reverse;
+}
+
+/* ................................... */
+.main-title span:nth-child(odd),
+.main-title span:nth-child(even) {
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: cubic-bezier(.58, .01, .87, .17);
+}
+
+.main-title span:nth-child(odd) {
+  animation-name: letter-odd-animation;
+}
+
+.main-title span:nth-child(even) {
+  animation-name: letter-even-animation;
+}
+
+@keyframes main-title {
+  from {
+    transform: rotate(2deg);
+  }
+
+  50% {
+    transform: rotate(-2deg);
+  }
+
+  to {
+    transform: rotate(2deg);
+  }
+}
+
+@keyframes letter-odd-animation {
+  from {
+    transform: rotate(0deg);
+    letter-spacing: normal;
+  }
+
+  30% {
+    transform: rotate(-20deg) scale(1.1);
+    letter-spacing: 20px;
+    color: rgb(90, 1, 1);
+  }
+
+  to {
+    transform: rotate(0deg);
+    letter-spacing: normal;
+  }
+}
+
+@keyframes letter-even-animation {
+  from {
+    transform: rotate(0deg);
+    letter-spacing: normal;
+  }
+
+  30% {
+    transform: rotate(20deg) scale(1.1);
+    letter-spacing: 20px;
+    color: rgb(1, 3, 32);
+  }
+
+  to {
+    transform: rotate(0deg);
+    letter-spacing: normal;
+  }
+}
+
+
+/* .............................. */
+
+.task-wrap {
+  max-width: 900px;
+  padding: 5px 30px;
+  margin: 0 auto;
+  border: 1px solid;
+  border-radius: 10px;
+  color: #4c4c4c;
+  box-shadow: 0px 0px 48px 28px rgba(34, 60, 80, 0.31);
+  transition: .4s;
+}
+
+.task-title {
+  margin: 15px 0;
+}

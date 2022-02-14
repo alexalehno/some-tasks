@@ -1,0 +1,139 @@
+.code-wrap {
+  max-width: 800px;
+}
+
+.info-list {
+  padding: 0;
+  margin: 20px auto;
+}
+
+.info-item {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 7px;
+  margin: 5px 0;
+  list-style: none;
+}
+
+.info-item:last-child {
+  border: 1px solid;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.info-item:last-child:hover {
+  background-color: #00000033;
+}
+
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.kata-list {
+  padding: 0;
+  font-size: 16px;
+  color: black;
+}
+
+.kata-list li {
+  padding: 10px;
+  border-top: none;
+  border: 1px solid black;
+  cursor: pointer;
+  list-style: none;
+  transition: 0.4s;
+}
+
+.kata-list li:nth-child(odd) {
+  background-color: #ffffff63;
+}
+
+.kata-list li:nth-child(even) {
+  background-color: #4d4a4a63;
+}
+
+.kata-list li:hover {
+  background-color: #f3f15d78;
+}
+
+.info-wrap {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+  border-bottom: 1px solid;
+  border-bottom-style: dotted;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.overlay-preloader {
+  background: radial-gradient(circle, rgb(255 0 0) 0%, rgba(229, 104, 104, 0) 64%, rgba(0, 212, 255, 0) 100%);
+  z-index: 19;
+}
+
+.overlay-kata {
+  align-items: flex-start;
+  background-color: rgba(0, 0, 0, 0.7);
+  overflow-y: auto;
+  z-index: 9;
+}
+
+/* ............... */
+.overlay-kata::-webkit-scrollbar {
+  width: 8px;
+  background-color: rgb(194, 194, 194);
+}
+
+.overlay-kata::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: linear-gradient(180deg, #bd0101, #5e0000);
+}
+
+/* ............... */
+
+.preloader {
+  width: 70px;
+  height: 70px;
+  border: 10px solid #f3f3f3;
+  border-top: 10px solid red;
+  border-radius: 50%;
+  animation: spin 2s linear infinite;
+}
+
+.kata-content {
+  max-width: 700px;
+  width: 100%;
+  height: max-content;
+  padding: 20px 30px;
+  margin: 70px 0 70px 8px;
+  border: 2px solid;
+  border-radius: 10px;
+  color: #242424;
+  background-color: gray;
+  line-height: 1.6;
+  letter-spacing: 2px;
+  font-size: 18px;
+  word-break: break-word;
+}
+
+.hidden {
+  display: none;
+}

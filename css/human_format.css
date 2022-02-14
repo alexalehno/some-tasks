@@ -1,0 +1,11 @@
+.human-task {
+  max-width: 750px;
+}
+
+.data-input {
+  height: 50px;
+}
+
+.data-output {
+  line-height: 1.5;
+}
