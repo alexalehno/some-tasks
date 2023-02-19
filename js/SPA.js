@@ -138,7 +138,7 @@ class ViewSPA {
         page += '<li class="info-item">Rank: <span></span></li>';
         page += '<li class="info-item" id="completed-btn">Completed: <span></span></li>';
         page += '</ul></div>';
-        document.body.style.background = 'linear-gradient(49deg, rgb(255 0 0), rgb(255 94 94), rgb(255 223 223))';
+        document.body.style.background = 'linear-gradient(49deg, rgb(248 151 151), rgb(255 223 223))';
         break;
     }
 
