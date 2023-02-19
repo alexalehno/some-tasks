@@ -69,75 +69,100 @@ class ViewSPA {
 
     switch (this.myModel.SPAState.pagename) {
       case 'Main':
-        page += '<h2 class="main-title"><span>H</span><span>E</span><span>L</span><span>L</span><span>O</span><span>!</span></h2>';
+        page = `
+        <h2 class="main-title">
+          <span>H</span>
+          <span>E</span>
+          <span>L</span>
+          <span>L</span>
+          <span>O</span>
+          <span>!</span>
+        </h2>`;
+
         document.body.style.background = 'linear-gradient(45deg, rgb(0 0 0), rgb(76 76 76), rgb(0 0 0))';
         break;
 
       case 'Morse':
-        page += '<div class="task-wrap">';
-        page += '<h3 class="task-title">Morse-decoder/encoder</h3>';
-        page += '<div class="switch-wrap">';
-        page += '<span>encode</span>';
-        page += '<label class="switch">';
-        page += '<input type="checkbox">';
-        page += '<span class="slider"></span>';
-        page += '</label>';
-        page += '<span>decode</span>';
-        page += '</div>';
-        page += '<textarea class="input-code" id="input_morse" placeholder="Input value"></textarea>';
-        page += '<textarea class="output-code" id="output_morse" placeholder="Result"></textarea>';
+        page = `
+        <div class="task-wrap">
+          <h3 class="task-title">Morse-decoder/encoder</h3>
+          <div class="switch-wrap">
+            <span>encode</span>
+            <label class="switch">
+              <input type="checkbox">
+              <span class="slider"></span>
+            </label>
+            <span>decode</span>
+          </div>
+          <textarea class="input-code" id="input_morse" placeholder="Input value"></textarea>
+          <textarea class="output-code" id="output_morse" placeholder="Result"></textarea>
+        </div>`;
+
         document.body.style.background = 'linear-gradient(45deg, rgb(247, 247, 247), rgb(238, 163, 42), rgb(255, 0, 0)';
         break;
 
       case 'Human-format':
-        page += '<div class="task-wrap human-task">';
-        page += '<h3 class="task-title">Human readable duration format</h3>';
-        page += '<input class="input-code data-input" id="input_sec" type="text" placeholder="Enter the number of seconds" maxlength="20" autocomplete="off">';
-        page += '<div class="output-code data-output" id="output_time"></div>';
-        page += '</div>';
+        page = `
+        <div class="task-wrap human-task">
+          <h3 class="task-title">Human readable duration format</h3>
+          <input class="input-code data-input" id="input_sec" type="text" placeholder="Enter the number of seconds" maxlength="20" autocomplete="off">
+          <div class="output-code data-output" id="output_time"></div>
+        </div>`;
+
         document.body.style.background = 'radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%)';
         break;
 
       case 'Vigenere-cipher':
-        page += '<div class="task-wrap">';
-        page += '<h3 class="task-title">Vigenere-cipher</h3>';
-        page += '<div class="switch-wrap switch-vig">';
-        page += '<label class="radio-item">encrypt';
-        page += '<input type="radio" name="radio" value="encrypt" checked>';
-        page += '<span class="checkmark"></span>';
-        page += '</label>';
-        page += '<label class="radio-item">decrypt';
-        page += '<input type="radio" name="radio" value="decrypt">';
-        page += '<span class="checkmark"></span>';
-        page += '</label>';
-        page += '</div>';
-        page += '<input class="input-code input-vig" id="key_vig" placeholder="Keyword" autocomplete="off">';
-        page += '<textarea class="input-code textarea-vig" id="mes_vig" placeholder="Message"></textarea>';
-        page += '<textarea class="output-code textarea-vig" id="out_vig" placeholder="Result"></textarea>';
-        page += '</div>';
+        page = `
+        <div class="task-wrap">
+          <h3 class="task-title">Vigenere-cipher</h3>
+          <div class="switch-wrap switch-vig">
+            <label class="radio-item">encrypt
+              <input type="radio" name="radio" value="encrypt" checked>
+              <span class="checkmark"></span>
+            </label>
+            <label class="radio-item">decrypt
+              <input type="radio" name="radio" value="decrypt">
+              <span class="checkmark"></span>
+            </label>
+          </div>
+          <input class="input-code input-vig" id="key_vig" placeholder="Keyword" autocomplete="off">
+          <textarea class="input-code textarea-vig" id="mes_vig" placeholder="Message"></textarea>
+          <textarea class="output-code textarea-vig" id="out_vig" placeholder="Result"></textarea>
+        </div>`;
+
         document.body.style.background = 'linear-gradient(45deg, rgb(255 0 0), rgb(165 255 207), rgb(48 48 48))';
         break;
 
       case 'Expression-calculator':
-        page += '<div class="task-wrap">';
-        page += '<h3 class="task-title">Expression calculator</h3>';
-        page += '<textarea class="input-code input-calc" placeholder="Expression"></textarea>';
-        page += '<div class="calc-wrap"><button class="btn-calc">GO</button>';
-        page += '<div class="output-code output-calc"></div></div>';
-        page += '</div>';
+        page = `
+        <div class="task-wrap">
+          <h3 class="task-title">Expression calculator</h3>
+          <textarea class="input-code input-calc" placeholder="Expression"></textarea>
+          <div class="calc-wrap">
+            <button class="btn-calc">GO</button>
+            <div class="output-code output-calc"></div>
+          </div>
+        </div>`;
+
         document.body.style.background = 'radial-gradient(circle, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%)';
         break;
 
       case 'Code-wars':
-        page += '<div class="task-wrap code-wrap">';
-        page += '<div class="overlay overlay-preloader"><div class="preloader"></div></div>';
-        page += '<h3 class="task-title">Code wars</h3>';
-        page += '<ul class="info-list">';
-        page += '<li class="info-item">Username: <span></span></li>';
-        page += '<li class="info-item">Honor: <span></span></li>';
-        page += '<li class="info-item">Rank: <span></span></li>';
-        page += '<li class="info-item" id="completed-btn">Completed: <span></span></li>';
-        page += '</ul></div>';
+        page = `
+      <div class="task-wrap code-wrap">
+        <div class="overlay overlay-preloader">
+          <div class="preloader"></div>
+        </div>
+        <h3 class="task-title">Code wars</h3>
+        <ul class="info-list">
+          <li class="info-item">Username: <span></span></li>
+          <li class="info-item">Honor: <span></span></li>
+          <li class="info-item">Rank: <span></span></li>
+          <li class="info-item" id="completed-btn">Completed: <span></span></li>
+        </ul>
+      </div>`;
+
         document.body.style.background = 'linear-gradient(49deg, rgb(248 151 151), rgb(255 223 223))';
         break;
     }
