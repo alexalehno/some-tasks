@@ -150,18 +150,18 @@ class ViewSPA {
 
       case 'Code-wars':
         page = `
-      <div class="task-wrap code-wrap">
-        <div class="overlay overlay-preloader">
-          <div class="preloader"></div>
-        </div>
-        <h3 class="task-title">Code wars</h3>
-        <ul class="info-list">
-          <li class="info-item">Username: <span></span></li>
-          <li class="info-item">Honor: <span></span></li>
-          <li class="info-item">Rank: <span></span></li>
-          <li class="info-item" id="completed-btn">Completed: <span></span></li>
-        </ul>
-      </div>`;
+        <div class="task-wrap code-wrap">
+          <div class="overlay overlay-preloader">
+            <div class="preloader"></div>
+          </div>
+          <h3 class="task-title">Code wars</h3>
+          <ul class="info-list">
+            <li class="info-item">Username: <span></span></li>
+            <li class="info-item">Honor: <span></span></li>
+            <li class="info-item">Rank: <span></span></li>
+            <li class="info-item" id="completed-btn">Completed: <span></span></li>
+          </ul>
+        </div>`;
 
         document.body.style.background = 'linear-gradient(49deg, rgb(248 151 151), rgb(255 223 223))';
         break;
