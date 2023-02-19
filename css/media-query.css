@@ -16,11 +16,10 @@
 @media all and (max-width: 590px) {
   .nav-item>button {
     width: 100px;
-    padding: 5px 12px;
   }
 
   .main-title {
-    font-size: 3em;
+    font-size: 4em;
   }
 
   .btn-calc {
@@ -50,7 +49,7 @@
   }
 
   .main-title {
-    font-size: 2em;
+    font-size: 3em;
   }
 
   .task-wrap {

@@ -67,20 +67,15 @@ body {
   font-size: 7em;
   text-shadow: 10px -3px 8px rgb(1 1 1 / 20%);
   user-select: none;
-
-  animation-name: main-title;
-  animation-duration: 0.2s;
-  animation-iteration-count: infinite;
-  animation-direction: reverse;
 }
 
 /* ................................... */
 .main-title span:nth-child(odd),
 .main-title span:nth-child(even) {
-  animation-duration: 1s;
+  animation-duration: 4s;
   animation-iteration-count: infinite;
   animation-direction: alternate;
-  animation-timing-function: cubic-bezier(.58, .01, .87, .17);
+  animation-timing-function:ease-in-out;
 }
 
 .main-title span:nth-child(odd) {
@@ -91,53 +86,17 @@ body {
   animation-name: letter-even-animation;
 }
 
-@keyframes main-title {
-  from {
-    transform: rotate(2deg);
-  }
-
-  50% {
-    transform: rotate(-2deg);
-  }
-
-  to {
-    transform: rotate(2deg);
-  }
-}
-
 @keyframes letter-odd-animation {
-  from {
-    transform: rotate(0deg);
-    letter-spacing: normal;
-  }
-
-  30% {
-    transform: rotate(-20deg) scale(1.1);
-    letter-spacing: 20px;
-    color: rgb(90, 1, 1);
-  }
-
   to {
-    transform: rotate(0deg);
-    letter-spacing: normal;
+    letter-spacing: 10px;
+    color: rgb(90, 1, 1);
   }
 }
 
 @keyframes letter-even-animation {
-  from {
-    transform: rotate(0deg);
-    letter-spacing: normal;
-  }
-
-  30% {
-    transform: rotate(20deg) scale(1.1);
-    letter-spacing: 20px;
-    color: rgb(1, 3, 32);
-  }
-
   to {
-    transform: rotate(0deg);
-    letter-spacing: normal;
+    letter-spacing: 10px;
+    color: rgb(1, 3, 32);
   }
 }
 
